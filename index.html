@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - A Pen by Jessica Singhal</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <style>
+        .hidden { display: none; }
+    </style>
+</head>
+<body>
+    <img src="medtronic.png" alt="Left Logo" class="logo-top-left">
+    <img src="digital innovation logo.png" alt="Right Logo" class="logo-top-right">
+
+    <div id="signUpScreen">
+        <h2>Sign Up</h2>
+        <input type="text" id="employeeId" placeholder="User Name (singhh23)"> <br>
+        <input type="text" id="firstName" placeholder="First Name"> <br>
+        <input type="text" id="lastName" placeholder="Last Name"> <br>
+        <button type="button" id="startQuizButton">Start Quiz</button>
+        <div id="errorMessage" class="error-message"></div>
+        </div>
+         
+        <script>
+                document.getElementById('startQuizButton').addEventListener('click', function(event) {
+                    // Prevent the form from being submitted
+                    //event.preventDefault();
+         
+                    // Get form inputs
+                    const firstName = document.getElementById('firstName');
+                    const lastName = document.getElementById('lastName');
+                    const userid = document.getElementById('employeeId');
+                    //const errorMessage = document.getElementById('errorMessage');
+         
+                    // Check if fields are empty
+                    if (firstName.value.trim() === '' || userid.value.trim() === '' || firstName.value.trim() === '') {
+                        errorMessage.textContent = 'Please fill in all fields.';
+                    } else {
+                        // Reset error message
+                        errorMessage.textContent = '';
+         
+                        startQuiz(document.getElementById('firstName').value, document.getElementById('lastName').value, document.getElementById('employeeId').value);
+                    }
+         
+                });
+        </script>
+         
+            <!-- Quiz Screen -->
+        <div id="quizScreen" class="hidden">
+        <h2>Question <span id="questionNumber">1</span>/5</h2>
+        <p id="questionText">Question text goes here</p>
+        <ul id="answerList"></ul>
+        <button onclick="nextQuestion()">Next Question</button>
+        </div>
+         
+            <!-- Results Screen -->
+        <div id="resultsScreen" class="hidden">
+        <h2>Results</h2>
+        <p id="correctAnswersCount"></p>
+        <p id="timeSpent"></p>
+        </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

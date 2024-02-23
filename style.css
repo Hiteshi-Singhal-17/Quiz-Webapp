@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+   /* background-color: #DBE9EE; /* Atmospheric white */
+    background-image: url('Neural\ Network.png'); 
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    color: #000080; /* Navy blue */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Logo on the top left */
+.logo-top-left {
+    position: absolute;
+    top: 10px; /* Adjust as necessary for spacing from the top */
+    left: 10px; /* Adjust as necessary for spacing from the left */
+    height: 100px; /* Adjust as necessary for your logo */
+}
+
+/* Logo on the top right */
+.logo-top-right {
+    position: absolute;
+    top: 10px; /* Adjust as necessary for spacing from the top */
+    right: 10px; /* Adjust as necessary for spacing from the right */
+    height: 100px; /* Adjust as necessary for your logo */
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #F5F5F5; /* Slightly lighter shade for container background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    width: 100%;
+}
+
+#signUpScreen, #quizScreen, #resultsScreen {
+    background-color: #FFFFFF; /* White */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px; /* Adjusted for column width */
+    margin: 10px;
+}
+
+h2 {
+    color: #007FFF; /* Electric blue */
+}
+
+input[type="text"], button {
+    padding: 10px;
+    width: calc(100% - 20px); /* Full width - padding */
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    border: 1px solid #007FFF; /* Electric blue */
+    border-radius: 5px;
+}
+
+button {
+    background-color: #007FFF; /* Electric blue */
+    color: #FFFFFF; /* White */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker shade of electric blue for hover effect */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li button {
+    text-align: left;
+}
